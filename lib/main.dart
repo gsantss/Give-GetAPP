@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:trab/tela//cadastro.dart';
+import 'package:trabalho/cadastro.dart';
+import 'package:trabalho/login.dart';
 
-
-
-var routes = <String, WidgetBuilder>{
-  "/Cadastro": (BuildContext context) => Cadastro(),
-};
-
-void main() => runApp(new MaterialApp(
-    theme:
-    ThemeData(primaryColor: Colors.cyan,primarySwatch: Colors.cyan,
-        primaryColorDark: Colors.blue),
+void main() {
+  runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Cadastro(),
-    routes: routes));
+    home: MyLogin(),
+    routes: {
+      'register': (context) => MyRegister(),
+      'login': (context) => MyLogin(),
+    },
+  ));
+}
