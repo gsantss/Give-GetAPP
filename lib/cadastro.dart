@@ -9,15 +9,19 @@ class _CadastroState extends State<Cadastro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.lightBlue,
+
       appBar: AppBar(
-        title: Text('Cadastre-se'),
+
+               title: Text('Give\n &Get'),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 28),
+        backgroundColor: Colors.blueAccent,
 
       ),
       body: Container(
           padding: EdgeInsets.all(20.0),
 
-          child: Form(
+                  child: Form(
 
             child: ListView(
               children: <Widget>[
@@ -84,19 +88,22 @@ class _CadastroState extends State<Cadastro> {
                       height:50.0,
                       width: 210.0,
                       margin: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 40.0),
-                      child: BottomAppBar(
+                      child:
 
-                        child: Text(
-
-                          'Criar Conta',
-                          style: TextStyle(
-                              color: Colors.white
-                          ),
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color(0xff4c505b),
+                          child: IconButton(
+                              color: Colors.white,
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.arrow_forward,
+                              )),
                         ),
                         color: Colors.lightBlue,
                       ),
 
-                    ),
+
 
                   ],
                 ),
