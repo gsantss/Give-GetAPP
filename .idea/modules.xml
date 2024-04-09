@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/give_get.iml" filepath="$PROJECT_DIR$/give_get.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/give_get_android.iml" filepath="$PROJECT_DIR$/android/give_get_android.iml" />
     </modules>
   </component>
 </project>

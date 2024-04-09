@@ -23,7 +23,7 @@ class _InicioState extends State<Inicio> {
     Home(),
     Publicar(),
     perfil("Meu Perfil"),
-    sobre("Sobre APP")
+    sobre()
   ];
 
   void onTabTapped(int index) {
@@ -35,7 +35,7 @@ class _InicioState extends State<Inicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      //appBar: AppBar(),
       body: _telas[_indiceAtual],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _indiceAtual,
