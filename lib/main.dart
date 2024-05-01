@@ -1,15 +1,16 @@
+import 'dart:js';
+
 import "package:flutter/material.dart";
+import 'package:give_get/cadastro.dart';
 import 'package:give_get/home.dart';
 
 import 'perfil.dart';
 import 'sobre.dart';
 import 'Publicar.dart';
+import 'login.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Inicio(),
-  ));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Inicio()));
 }
 
 class Inicio extends StatefulWidget {
@@ -19,12 +20,7 @@ class Inicio extends StatefulWidget {
 
 class _InicioState extends State<Inicio> {
   int _indiceAtual = 0;
-  final List<Widget> _telas = [
-    Home(),
-    Publicar(),
-    perfil("Meu Perfil"),
-    sobre("Sobre APP")
-  ];
+  final List<Widget> _telas = [Home(), Publicar(), sobre("Sobre APP")];
 
   void onTabTapped(int index) {
     setState(() {
@@ -50,11 +46,6 @@ class _InicioState extends State<Inicio> {
             icon: Icon(Icons.add),
             backgroundColor: Color(0xFF11224D),
             label: "Divulgar",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            backgroundColor: Color(0xFF11224D),
-            label: "Perfil",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.help),
